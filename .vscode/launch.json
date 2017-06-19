@@ -10,28 +10,9 @@
       "args": [],
       "stopAtEntry": false,
       "cwd": "${workspaceRoot}/source",
-      "environment": [],
-      "externalConsole": true,
-      "linux": {
-        "MIMode": "gdb"
+      "sourceFileMap": {
+        "/": "/run/user/1000/gvfs/sftp:host=nafhh-atlas06.desy.de/"
       },
-      "osx": {
-        "MIMode": "gdb"
-      },
-      "windows": {
-        "MIMode": "gdb"
-      }
-    },
-
-    {
-      "name": "(gdb) Launch Remote Debugging of file1 (cwd = folder1)",
-      "type": "cppdbg",
-      "request": "launch",
-      "program": "${workspaceRoot}/build/debug/file1",
-      "miDebuggerServerAddress": "localhost:9091",
-      "args": [],
-      "stopAtEntry": false,
-      "cwd": "${workspaceRoot}/source/folder1",
       "environment": [],
       "externalConsole": true,
       "linux": {
