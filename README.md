@@ -67,7 +67,7 @@ If one modifies the `cwd` property in `launch.json` to read
 
 // [...]
 ```
-then the breakpoint in `folder1/file1.cxx` will be displayed correctly in the editor window,
+as was done for the debug configuration `(gdb) Launch Remote Debugging of file1 (cwd = folder1)` then the breakpoint in `folder1/file1.cxx` will be displayed correctly in the editor window,
 ![screenshot-cwd-1](screenshot-cwd-1.png)
 but the breakpoint in `folder2/file2.cxx` will give the same error shown previously.
 ![screenshot-cwd-2](screenshot-cwd-2.png)
