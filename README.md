@@ -1,28 +1,23 @@
 # vscode-cpp-remote-debug
 Project for testing remote debugging of C++ code with gdb and gdbserver in VS Code
 
-> **Problem**
+> **~~Problem~~**
 >
-> When remotely debugging C++ source code residing in a complex folder hierarchy VS Code lacks proper graphical debugging integration in the GUI.
+> ~~When remotely debugging C++ source code residing in a complex folder hierarchy VS Code lacks proper graphical debugging integration in the GUI.~~
+>
+> After fixing the `.vscode/launch.json` by adding
+> ```json
+> // ...
+> "sourceFileMap": {
+>   "/": "/run/user/1000/gvfs/sftp:host=nafhh-atlas06.desy.de/"
+> },
+> // ...
+> ```
+> as suggested in [this GitHub issue](https://github.com/Microsoft/vscode-cpptools/issues/834#issuecomment-309519732) the graphical remote debugging works perfectly fine!
+
 
 In order to demonstrate this, this repo intentionally contains the full folder structure for out-of-source builds as well as a minimum failing folder setup consisting of two source code folders.
 
-> **Version numbers**
->
-> VS Code
-> ```
-> Version 1.13.1
-> Commit 379d2efb5539b09112c793d3d9a413017d736f89
-> Date 2017-06-14T18:18:03.540Z
-> Shell 1.6.6
-> Renderer 56.0.2924.87
-> Node 7.4.0
-> ```
->
-> ms-vscode.cpptools
-> ```
-> Version 0.11.4: June 2, 2017
-> ```
 
 ## Setup
 
@@ -58,24 +53,12 @@ In order to demonstrate this, this repo intentionally contains the full folder s
 
 - Open the debug view, select the `Remote Debug` configuration and launch the debugger configuration `(gdb) Launch Remote Debugging of file1`
 
-You should then see that VS Code can't associate the active / hit breakpoint with the open editor window (error message: `Unable to open 'file1.cxx': File not found`):
-![screenshot](screenshot.png)
+Happy debugging!
 
-
-If one modifies the `cwd` property in `launch.json` to read
-```json
-// [...]
-
-"cwd": "${workspaceRoot}/source/folder1",
-
-// [...]
-```
-as was done for the debug configuration `(gdb) Launch Remote Debugging of file1 (cwd = folder1)` then the breakpoint in `folder1/file1.cxx` will be displayed correctly in the editor window,
-![screenshot-cwd-1](screenshot-cwd-1.png)
-but the breakpoint in `folder2/file2.cxx` will give the same error shown previously.
-![screenshot-cwd-2](screenshot-cwd-2.png)
+![screenshot-graphical-remote-debugging](screenshot-graphical-remote-debugging.png)
 
 
 ## Credits
 
 - The `launch.json` is based on the following, very helpful article: [Debugging C/C++ Programs Remotely Using Visual Studio Code and gdbserver](https://medium.com/@spe_/debugging-c-c-programs-remotely-using-visual-studio-code-and-gdbserver-559d3434fb78).
+- Big thanks go to [@pieandcakes](https://github.com/pieandcakes) for pointing out the `sourceFileMap` property in `.vscode/launch.json`.
