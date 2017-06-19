@@ -71,3 +71,8 @@ then the breakpoint in `folder1/file1.cxx` will be displayed correctly in the ed
 ![screenshot-cwd-1](screenshot-cwd-1.png)
 but the breakpoint in `folder2/file2.cxx` will give the same error shown previously.
 ![screenshot-cwd-2](screenshot-cwd-2.png)
+
+
+## Credits
+
+- The `launch.json` is based on the following, very helpful article: [Debugging C/C++ Programs Remotely Using Visual Studio Code and gdbserver](https://medium.com/@spe_/debugging-c-c-programs-remotely-using-visual-studio-code-and-gdbserver-559d3434fb78).
