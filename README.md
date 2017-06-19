@@ -26,7 +26,10 @@ In order to demonstrate this, this repo intentionally contains the full folder s
 
 ## Setup
 
-- local machine is Linux notebook, denoted by `local $`
+- local machine is Linux notebook (Linux Mint 18 Cinnamon Edition), denoted by `local $`
+
+  the file system of the remote machine is mounted on the local machine either using `File -> Connect to Server` (type: `ssh`) from the Nemo file browser or using `sshfs`
+  
 - remote machine is Linux server, denoted by `remote $`, on which `gdbserver` is available
 
 
