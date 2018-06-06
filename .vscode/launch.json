@@ -9,7 +9,7 @@
       "miDebuggerServerAddress": "localhost:9091",
       "args": [],
       "stopAtEntry": false,
-      "cwd": "${workspaceRoot}/source",
+      "cwd": "${workspaceRoot}",
       "sourceFileMap": {
         "/": "/run/user/1000/gvfs/sftp:host=naf-atlas.desy.de/"
       },
