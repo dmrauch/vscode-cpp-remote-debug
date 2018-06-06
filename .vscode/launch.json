@@ -11,7 +11,7 @@
       "stopAtEntry": false,
       "cwd": "${workspaceRoot}/source",
       "sourceFileMap": {
-        "/": "/run/user/1000/gvfs/sftp:host=nafhh-atlas06.desy.de/"
+        "/": "/run/user/1000/gvfs/sftp:host=naf-atlas.desy.de/"
       },
       "environment": [],
       "externalConsole": true,
