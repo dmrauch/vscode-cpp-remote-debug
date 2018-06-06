@@ -56,4 +56,4 @@ Happy debugging!
 ## Credits
 
 - The `launch.json` is based on the following, very helpful article: [Debugging C/C++ Programs Remotely Using Visual Studio Code and gdbserver](https://medium.com/@spe_/debugging-c-c-programs-remotely-using-visual-studio-code-and-gdbserver-559d3434fb78).
-- Big thanks go to [@pieandcakes](https://github.com/pieandcakes) for pointing out the `sourceFileMap` property in `.vscode/launch.json`.
+- Big thanks go to [@pieandcakes](https://github.com/pieandcakes) for pointing out the `sourceFileMap` property in `.vscode/launch.json` ([GitHub#834](https://github.com/Microsoft/vscode-cpptools/issues/834#issuecomment-309519732)).
